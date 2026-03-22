@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Untuk Kamu 🎉</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ffd6e0, #ffe6f0);
+      padding: 50px;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    .btn1 { background-color: #ff4d6d; color: white; }
+    .btn2 { background-color: #999; color: white; position: absolute; }
+  </style>
+</head>
+<body>
+
+  <h1>Hai kamu 👀</h1>
+  <p>Ada sesuatu buat kamu...</p>
+
+  <button class="btn1" onclick="nextStep()">Buka 🎁</button>
+  <button class="btn2" id="escape">Nggak mau 😤</button>
+
+  <script>
+    const escapeBtn = document.getElementById("escape");
+
+    // tombol kabur 😂
+    escapeBtn.addEventListener("mouseover", () => {
+      escapeBtn.style.top = Math.random() * window.innerHeight + "px";
+      escapeBtn.style.left = Math.random() * window.innerWidth + "px";
+    });
+
+    function nextStep() {
+      document.body.innerHTML = `
+        <h1>🎉 HAPPY BIRTHDAY 🎉</h1>
+        <p style="font-size:20px;">
+          Selamat yaa 🥳<br><br>
+          Makasih udah jadi temen yang selalu ada<br>
+          (walaupun kadang ngeselin 🤡)<br><br>
+          Semoga kamu makin bahagia, sehat, dan...<br>
+          makin tidak tua ya 😭🙏<br><br>
+          — dari aku yang paling baik 😎
+        </p>
+
+        <img src="https://i.imgur.com/4M7IWwP.png" width="200"><br><br>
+
+        <button onclick="alert('WISH: Semoga traktiran nambah 😋')">
+          Klik untuk bonus 🎊
+        </button>
+      `;
+    }
+  </script>
+
+</body>
+</html>
